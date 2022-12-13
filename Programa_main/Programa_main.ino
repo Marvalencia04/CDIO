@@ -1,11 +1,13 @@
 #include <Adafruit_ADS1X15.h>
 Adafruit_ADS1115 ads1015;
+
 #include "Humedad.h"
 #include "Salinidad.h"
 #include "Temperatura.h"
 #include "Luminosidad.h"
 #include "Ph.h"
 #include "GPS.h"
+
 #include "Wifi.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
