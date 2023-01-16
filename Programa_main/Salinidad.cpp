@@ -1,6 +1,6 @@
 
 #include "Salinidad.h"
-
+int Salinidad::medir (){
       // El circuito de salinidad se conecta al puerto 5
       #define power_pin 5
 
@@ -28,4 +28,3 @@
         return (Sal);
         }
       }
-}
