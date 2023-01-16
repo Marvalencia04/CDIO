@@ -7,7 +7,8 @@ Adafruit_ADS1115 ads1015;
 #include "Luminosidad.h"
 #include "Ph.h"
 #include "GPS.h"
-
+#include "TinyGPS++.h"
+TinyGPSPlus gps;
 #include "Wifi.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
