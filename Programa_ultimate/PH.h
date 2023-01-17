@@ -1,6 +1,3 @@
-#ifndef PH_YA_INCLUIDO
-#define PH_YA_INCLUIDO
-
 class Ph{
     private:
         #define Offset 7-6.25
@@ -20,4 +17,3 @@ class Ph{
         float medirPh();
 
 };
-#endif

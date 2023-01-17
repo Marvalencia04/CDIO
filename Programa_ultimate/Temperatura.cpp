@@ -1,7 +1,9 @@
+#include "Temperatura.h"
 #include "Sparkfun.h"
+Sparkfun FunT;
 float Temperatura::medirTemp()
 {
-    int16_t adc0 = ads1015.readADC_SingleEnded(channelValue);
+    int16_t adc0 = FunT.ads1015.readADC_SingleEnded(channelValue);
 
     m = 33 * pow(10, -3);
     b = 0.95;

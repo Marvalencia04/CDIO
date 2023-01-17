@@ -1,6 +1,3 @@
-#ifndef TEMPERATURA_YA_INCLUIDO
-#define TEMPERATURA_YA_INCLUIDO
-
 class Temperatura
   {
     private:
@@ -12,4 +9,3 @@ class Temperatura
     public:
       float medirTemp();
   };
-#endif

@@ -1,7 +1,5 @@
-#ifndef GPS_YA_INCLUIDO
-#define GPS_YA_INCLUIDO
-#endif
 #include "TinyGPSPlus.h"
+#include "Sparkfun.h"
 TinyGPSPlus gps;
 
 class GPS{

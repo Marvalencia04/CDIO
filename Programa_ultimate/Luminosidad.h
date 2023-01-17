@@ -1,6 +1,3 @@
-#ifndef LUMINOSIDAD_YA_INCLUIDO
-#define LUMINOSIDAD_YA_INCLUIDO
-
 class Luminosidad
   {
     private:
@@ -9,4 +6,3 @@ class Luminosidad
     public:
     int medirLuz();
   };
-#endif

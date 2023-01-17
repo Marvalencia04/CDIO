@@ -1,6 +1,3 @@
-#ifndef HUMEDAD_YA_INCLUIDO
-#define HUMEDAD_YA_INCLUIDO
-
 class Humedad
   {
     private:
@@ -10,4 +7,3 @@ class Humedad
     public:
     int medirH();
   };
-#endif

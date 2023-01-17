@@ -1,5 +1,7 @@
+#include "wifi.h"
 #include "Sparkfun.h"
 #define NUM_FIELDS_TO_SEND 5
+Sparkfun FunW;
 // Comentar/Descomentar para ver mensajes de depuracion en monitor serie y/o respuesta del HTTP server
 #define PRINT_DEBUG_MESSAGES
 // #define PRINT_HTTP_RESPONSE
@@ -69,7 +71,7 @@ void connectWiFi()
   while (WiFi.status() != WL_CONNECTED)
   {
     // Blink the LED
-    digitalWrite(LED_PIN, ledStatus); // Write LED high/low
+    digitalWrite(FunW.LED_PIN, ledStatus); // Write LED high/low
     ledStatus = (ledStatus == HIGH) ? LOW : HIGH;
 #ifdef PRINT_DEBUG_MESSAGES
     Serial.println(".");

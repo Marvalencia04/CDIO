@@ -1,7 +1,9 @@
+#include "Luminosidad.h"
 #include "Sparkfun.h"
+Sparkfun FunL;
 int Luminosidad::medirLuz()
 {
-    float LecturaLuz = ads1015.readADC_SingleEnded(channelValue);
+    float LecturaLuz = FunL.ads1015.readADC_SingleEnded(channelValue);
     if (LecturaLuz >= 0 && LecturaLuz <= 300)
     {
         NivelLuz = 0;

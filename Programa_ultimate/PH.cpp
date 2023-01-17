@@ -1,12 +1,13 @@
 // PH.cpp//
+#include "PH.h"
 #include "Sparkfun.h"
-
+Sparkfun FunPh;
 float Ph::averageSample(int lista[ArrayLenght])
 {
 
     for (int i = 0; i <= (ArrayLenght - 1); i++)
     {
-        lista[i] = ads1015.readADC_SingleEnded(channelValue);
+        lista[i] = FunPh.ads1015.readADC_SingleEnded(channelValue);
         media = (lista[i] + media);
     }
     media = media / ArrayLenght;
