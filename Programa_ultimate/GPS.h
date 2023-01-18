@@ -1,5 +1,4 @@
 #include "TinyGPSPlus.h"
-#include "Sparkfun.h"
 TinyGPSPlus gps;
 
 class GPS{

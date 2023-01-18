@@ -1,19 +1,7 @@
-
 #include "Sparkfun.h"
-//#include "GPS.h"
-#include "Luminosidad.h"
-#include "Humedad.h"
-#include "PH.h"
-#include "Salinidad.h"
-#include "Temperatura.h"
 #include "wifi.h"
-Salinidad S;
-Humedad H;
-Luminosidad L;
-Ph PH;
-Temperatura T;
-wifi W;
 Sparkfun Fun;
+wifi W;
 void setup()
 {
   Serial.begin(9600);
@@ -21,8 +9,8 @@ void setup()
   Serial.println("Inicializamos las mediciones");
   Fun.ads1015.begin();
   Fun.ads1015.setGain(GAIN_ONE);
-  pinMode(Fun.power_pin, OUTPUT);
-  digitalWrite(Fun.LED_PIN, HIGH);
+  pinMode(W.power_pin, OUTPUT);
+  digitalWrite(W.LED_PIN, HIGH);
 #ifdef PRINT_DEBUG_MESSAGES
   Serial.print("Server_Host: ");
   Serial.println(Server_Host);
@@ -36,20 +24,20 @@ void setup()
 void loop()
 {
   //llamamos a la funcion de calcular de humedad
-  int NHumedad=H.medirH();
+  int NHumedad=Fun.medirH(5);
   delay(500);
   //llamamos a la funcion de calcular de salinidad
-  int Sal =S.medirSal();
+  int Sal =Fun.medirSal();
   delay(500);
   
   //llamamos a la funcion de calcular de temperatura
-  float Temp=T.medirTemp();
+  float Temp=Fun.medirTemp(4);
   delay(500);
   
   //llamamos a la funcion de calcular de el nivel de Ph Puerto 3
-  int NivelPh=PH.medirPh();
+  float NivelPh=Fun.medirPh(3);
   
-  int NivelLuz=L.medirLuz();
+  int NivelLuz=Fun.medirLuz(2);
   delay(500);
 
   //Una vez calculados todos los datos los enviamos a la nube
